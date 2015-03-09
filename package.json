@@ -1,0 +1,26 @@
+{
+  "name": "winston-syslog-posix",
+  "version": "0.1.0",
+  "description": "Posix syslog appender for winston that does not suck",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lancespeelmon/winston-posix-syslog.git"
+  },
+  "keywords": [
+    "winston",
+    "logging",
+    "syslog",
+    "posix",
+    "logger"
+  ],
+  "author": "Lance Speelmon <lance@speelmon.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lancespeelmon/winston-posix-syslog/issues"
+  },
+  "homepage": "https://github.com/lancespeelmon/winston-posix-syslog"
+}
