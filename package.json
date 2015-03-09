@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lancespeelmon/winston-posix-syslog.git"
+    "url": "https://github.com/lancespeelmon/winston-syslog-posix.git"
   },
   "keywords": [
     "winston",
@@ -20,9 +20,9 @@
   "author": "Lance Speelmon <lance@speelmon.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lancespeelmon/winston-posix-syslog/issues"
+    "url": "https://github.com/lancespeelmon/winston-syslog-posix/issues"
   },
-  "homepage": "https://github.com/lancespeelmon/winston-posix-syslog",
+  "homepage": "https://github.com/lancespeelmon/winston-syslog-posix",
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-errors": "^0.8.6",

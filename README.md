@@ -1,4 +1,4 @@
-# winston-posix-syslog [![Circle CI](https://circleci.com/gh/lancespeelmon/winston-posix-syslog.svg?style=svg)](https://circleci.com/gh/lancespeelmon/winston-posix-syslog)
+# winston-syslog-posix [![Circle CI](https://circleci.com/gh/lancespeelmon/winston-syslog-posix.svg?style=svg)](https://circleci.com/gh/lancespeelmon/winston-syslog-posix)
 
 A [winston][0] syslog transport based on the [posix][1] module for node.js.
 
@@ -6,7 +6,7 @@ A [winston][0] syslog transport based on the [posix][1] module for node.js.
 
 ``` bash
   $ npm install winston
-  $ npm install winston-posix-syslog
+  $ npm install winston-syslog-posix
 ```
 
 ## Usage
@@ -19,10 +19,10 @@ winston logger:
   var winston = require('winston');
 
   //
-  // Requiring `winston-posix-syslog` will expose
+  // Requiring `winston-syslog-posix` will expose
   // `winston.transports.SyslogPosix`
   //
-  require('winston-posix-syslog').SyslogPosix;
+  require('winston-syslog-posix').SyslogPosix;
 
   winston.add(winston.transports.SyslogPosix, options);
 ```
