@@ -1,7 +1,7 @@
 {
   "name": "winston-syslog-posix",
   "version": "0.1.2",
-  "description": "Winston posix syslog appender that does not suck...",
+  "description": "Winston posix syslog transport that does not suck...",
   "main": "lib/index.js",
   "scripts": {
     "test": "gulp test"
