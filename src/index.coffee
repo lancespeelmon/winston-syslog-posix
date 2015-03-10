@@ -7,6 +7,7 @@ SyslogPosix = winston.transports.SyslogPosix = (options = {}) ->
   @level = options.level or 'debug'
   @identity = options.identity or process.title
   @facility = options.facility or 'local0'
+  @unmapped = options.unmapped or 'info'
   @showPid = if options.showPid == undefined then true else options.showPid
 
 #
@@ -30,7 +31,7 @@ SyslogPosix::log = (level, msg, meta, callback) ->
   else if level == 'fatal'
     syslogSeverity = 'emerg'
   else
-    syslogSeverity = 'info'
+    syslogSeverity = @unmapped
 
   message = msg
   prepend = '[' + level + '] '
