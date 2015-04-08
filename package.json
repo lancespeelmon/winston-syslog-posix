@@ -1,6 +1,6 @@
 {
   "name": "winston-syslog-posix",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Winston posix syslog transport that does not suck...",
   "main": "lib/index.js",
   "scripts": {
