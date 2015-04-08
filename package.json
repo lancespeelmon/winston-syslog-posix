@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "posix": "^2.0.0",
-    "winston": "^0.9.0"
+    "winston": "^1.0.0"
   }
 }
