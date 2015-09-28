@@ -13,8 +13,8 @@ coffeeFiles = ['src/**/*.coffee']
 testFiles   = jsFiles
 buildFiles  = ['lib', 'coverage']
 
-gulp.task 'clean', (cb) ->
-  del buildFiles, cb
+gulp.task 'clean', ->
+  del.sync buildFiles
 
 gulp.task 'lint', ->
   gulp.src coffeeFiles
@@ -40,4 +40,4 @@ gulp.task 'test', ['coffee'], ->
         .pipe mocha reporter: 'nyan'
         .pipe istanbul.writeReports() # Creating the reports after tests run
 
-gulp.task 'default', ['test']
+gulp.task 'default', ['clean', 'test']
