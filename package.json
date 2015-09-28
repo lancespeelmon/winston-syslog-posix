@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/lancespeelmon/winston-syslog-posix",
   "devDependencies": {
-    "chai": "^2.1.1",
+    "chai": "^3.3.0",
     "coffee-errors": "^0.8.6",
     "coffee-script": "^1.9.1",
-    "del": "^1.1.1",
+    "del": "^2.0.2",
     "gulp": "^3.8.11",
     "gulp-coffee": "^2.3.1",
     "gulp-coffee-istanbul": "^0.7.0",
@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "posix": "^4.0.0",
-    "winston": "^1.0.0"
+    "winston": "^1.0.2"
   }
 }
