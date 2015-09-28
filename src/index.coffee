@@ -22,13 +22,19 @@ SyslogPosix::log = (level, msg, meta, callback) ->
 
   # map common debug levels to valid posix syslog values
   syslogSeverity = level
-  if level == 'trace'
+  if level == 'trace' or level == 'debug'
     syslogSeverity = 'debug'
-  else if level == 'warn'
+  else if level == 'notice'
+    syslogSeverity = 'notice'
+  else if level == 'warn' or level == 'warning'
     syslogSeverity = 'warning'
   else if level == 'error'
     syslogSeverity = 'err'
-  else if level == 'fatal'
+  else if level == 'crit' or level == 'critical'
+    syslogSeverity = 'crit'
+  else if level == 'alert'
+    syslogSeverity = 'alert'
+  else if level == 'fatal' or level == 'emerg'
     syslogSeverity = 'emerg'
   else
     syslogSeverity = @unmapped
