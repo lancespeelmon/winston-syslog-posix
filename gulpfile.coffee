@@ -3,7 +3,6 @@ gulp = require 'gulp'
 gutil = require 'gulp-util'
 coffee = require 'gulp-coffee'
 sourcemaps = require 'gulp-sourcemaps'
-istanbul = require 'gulp-coffee-istanbul'
 coffeelint = require 'gulp-coffeelint'
 mocha = require 'gulp-mocha'
 
@@ -33,11 +32,8 @@ gulp.task 'build', ['coffee']
 
 gulp.task 'test', ['coffee'], ->
   gulp.src testFiles
-    .pipe istanbul( includeUntested: true ) # Covering files
-    .pipe istanbul.hookRequire()
     .on 'finish', ->
       gulp.src specFiles
         .pipe mocha reporter: 'nyan'
-        .pipe istanbul.writeReports() # Creating the reports after tests run
 
 gulp.task 'default', ['clean', 'test']
