@@ -15,6 +15,7 @@ describe 'SyslogPosix Transport', ->
     expect(syslogPosix.identity).to.eql 'gulp'
     expect(syslogPosix.facility).to.eql 'local0'
     expect(syslogPosix.showPid).to.be.true
+    expect(syslogPosix.showLvl).to.be.true
     done()
 
   it 'initializes with passed options', (done) ->
@@ -23,11 +24,13 @@ describe 'SyslogPosix Transport', ->
       identity: 'goober'
       facility: 'local7'
       showPid: false
+      showLvl: false
     expect(syslogPosix.name).to.eql 'SyslogPosix'
     expect(syslogPosix.level).to.eql 'trace'
     expect(syslogPosix.identity).to.eql 'goober'
     expect(syslogPosix.facility).to.eql 'local7'
     expect(syslogPosix.showPid).to.be.false
+    expect(syslogPosix.showLvl).to.be.false
     done()
 
   it 'logs a short message', (done) ->

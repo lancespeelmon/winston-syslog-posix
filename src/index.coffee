@@ -9,6 +9,7 @@ SyslogPosix = winston.transports.SyslogPosix = (options = {}) ->
   @facility = options.facility or 'local0'
   @unmapped = options.unmapped or 'info'
   @showPid = if options.showPid == undefined then true else options.showPid
+  @showLvl = if options.showLvl == undefined then true else options.showLvl
 
 #
 # Inherit from `winston.Transport` so you can take advantage
@@ -40,7 +41,9 @@ SyslogPosix::log = (level, msg, meta, callback) ->
     syslogSeverity = @unmapped
 
   message = msg
-  prepend = '[' + level + '] '
+  prepend = ''
+  if @showLvl == true
+    prepend = '[' + level + '] '
   if typeof meta == 'string'
     message += ' ' + meta
   else if meta and typeof meta == 'object' and Object.keys(meta).length > 0

@@ -47,6 +47,7 @@ The following `options` are availble to configure `SyslogPosix`:
 * __facility:__ Syslog facility to use (Default: `local0`).
 * __unmapped:__ Unmatched levels will be mapped to this syslog level (Default: `info`).
 * __showPid:__ Display the PID of the process that log messages are coming from (Default `true`).
+* __showLvl:__ Display the level of the log messages (Default `true`).
 
 ## Log Levels
 
